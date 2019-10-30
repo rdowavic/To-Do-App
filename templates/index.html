@@ -1,0 +1,20 @@
+<h1> To Do List </h1>
+<p> This is my To Do List! </p>
+<div id="item-view" style="display: table;"> 
+	<div class="item-header" style="display: table-row; width: auto; clear: both;">
+	<div class="item-row">
+			<div style="display: table-column; float: left;"> Id </div>
+			<div style="display: table-column; float: left;"> Name </div>
+			<div style="display: table-column; float: right;"> Completed? </div>
+		 </div> 
+	</div>
+		{% for id, name, completed in items %}
+		<div class="item-row">
+			<div style="display: table-column; float: left;">{{ id }} </div>
+			<div style="display: table-column; float: left;">{{ name }} </div>
+			<div style="display: table-column; float: right;">{{ "true" if completed == 1 else "false" }} </div>
+		 </div> 
+		{% endfor %}
+	</div>
+</div>
+
